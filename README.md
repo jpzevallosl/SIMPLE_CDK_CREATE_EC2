@@ -102,22 +102,21 @@ npx cdk bootstrap
 Create a `.env` file in the project root. Example:
 
 ```ini
-VPC_ID=vpc-1234567890abcdef0
-SUBNET_ID=subnet-0123456789abcdef0
+VPC_ID=vpc-xxxxxxxxxx
+SUBNET_ID=subnet-xxxxxxxxxx
 SUBNET_AZ=us-east-1a
 INSTANCE_TYPE=t3.micro
 ROLE_NAME=EC2InstanceRole
 AMI_ID=ami-0123456789abcdef0
-SECURITY_GROUP_IDS=sg-0123456789abcdef0,sg-0abcdef1234567890
+SECURITY_GROUP_IDS=sg-xxxxxxxxxxxxxx,sg-xxxxxxxxxxxxxxxxxx
 
 # Optional if using SSH
 KEY_NAME=my-keypair
 
 # Tags (any number allowed)
-TAG_Environment=qa
-TAG_Project=system
-TAG_Function=TaskServer
-TAG_Name=GOS_TaskServer-QA
+TAG_Environment=dev
+TAG_Function=FunctionServer
+TAG_Name=YourServerName
 ```
 
 > Any environment variable starting with `TAG_` will be converted into an EC2 tag.
